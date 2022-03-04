@@ -1,0 +1,301 @@
+/*------------------------------------------------------------
+slanted
+------------------------------------------------------------*/
+// slanted1
+.p-slanted1{
+	overflow: hidden;
+	// ---------------------------------------
+	&__img1{
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	// ---------------------------------------
+	&__bg{
+		position: relative;
+		&:before{
+			content:'';
+			background: #1f5139;
+			position: absolute;
+			top: -95px;
+			left: 0;
+			width: 105%;
+			height: 200%;
+			margin: 3% -3% 0;
+			transform: rotate(3deg);
+			z-index: 2;
+		}
+	}
+	// ---------------------------------------
+	&__txt{
+		width: 600px;
+		margin: 0 auto;
+		position: relative;
+		z-index: 3;
+	}
+	// ---------------------------------------
+	&__ttl{
+		font-size: 2rem;
+		text-align: center;
+		color: #fff;
+	}
+	// ---------------------------------------
+	&__text{
+		font-size: 1.4rem;
+		color: #fff;
+	}
+}
+// ---------------------------------------
+.p-slanted1-2{
+	.p-slanted1__bg{
+		&:before{
+			transform: rotate(-3deg);
+		}
+	}
+}
+// ---------------------------------------
+.p-slanted1-3{
+	padding-bottom: 107px;
+	// ---------------------------------------
+	.p-slanted1__bg{
+		&:after{
+			content:'';
+			background: #f3d956;
+			position: absolute;
+			top: -95px;
+			left: 0;
+			width: 105%;
+			height: 200%;
+			margin: 3% -3% 0;
+			transform: rotate(-3deg);
+			z-index: 1;
+		}
+	}
+}
+// slanted2
+// ---------------------------------------
+.p-slanted2{
+	background: #00FFBF;
+	position: relative;
+	// ---------------------------------------
+	&__ttl{
+		text-align: center;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 15px 0;
+	}
+	// ---------------------------------------
+	&__main{
+		font-size: 2rem;
+	}
+	// ---------------------------------------
+	&__sub{
+		font-size: 1.2rem;
+		color: #000;
+		text-decoration: underline;
+	}
+	// ---------------------------------------
+	&__list{
+		display: flex;
+		justify-content: center;
+		padding-top: 124px;
+		// ---------------------------------------
+		li{
+			&:nth-child(2){
+				transform: translateY(-62px);
+			}
+			// ---------------------------------------
+			&:nth-child(3){
+				transform: translateY(-123px);
+			}
+		}
+	}
+	// ---------------------------------------
+	.c-SlanCart{
+		display: block;
+		width: 350px;
+		padding-bottom: 30px;
+		// ---------------------------------------
+		&__img{
+			transform: skew(0deg, -10deg);
+			height: 250px;
+			overflow: hidden;
+			padding-top: 30px;
+		}
+		// ---------------------------------------
+		&__cont{
+			overflow: hidden;
+			img{
+				transform:skew(0deg, 10deg) translateY(-55px);
+			}
+		}
+		// ---------------------------------------
+		&__txt{
+			font-size: 1.4rem;
+			color: #000;
+			transform: skew(0deg, -10deg);
+			text-align: center;
+			padding: 10px 0;
+		}
+	}
+}
+// slanted3
+// ---------------------------------------
+.p-slanted3{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	// ---------------------------------------
+	&__left{
+		width: 50%;
+		height: 400px;
+		transform: translate3d(0, 0, 0);
+		position: relative;
+		&:before{
+			content: '';
+			width: 8px;
+			height: 100%;
+			background: red;
+			left: 0;
+			top: 0;
+			position: absolute;
+			z-index: 9;
+		}
+	}
+	// ---------------------------------------
+	&__right{
+		width: 50%;
+		height: 400px;
+		transform: translate3d(0, 0, 0);
+		margin-top: 30px;
+		&:after{
+			content: '';
+			width: 8px;
+			height: 100%;
+			background: red;
+			right: 0;
+			top: 0;
+			position: absolute;
+			z-index: 9;
+		}
+		.p-slanted3__txt{
+			left: 22%;
+		}
+
+	}
+	// ---------------------------------------
+	&__bg1{
+		width: 100%;
+		height: 100%;
+		background: url('http://flocssbem.test20008.com/sheet/roadmap/kadai/009.jpg') no-repeat right;
+		background-size: cover;
+		transform: skewX(18deg) translateX(12%);
+	}
+	// -----------------------------------
+	&__bg2{
+		width: 100%;
+		height: 100%;
+		background: url('http://flocssbem.test20008.com/sheet/roadmap/kadai/010.jpg') no-repeat left;
+		background-size: cover;
+		transform: skewX(18deg) translateX(-12%);
+	}
+	// -----------------------------------
+	&__img1{
+		left: -20%;
+		border: 8px solid red;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		width: 120%;
+		height: 100%;
+		transform: skewX(-18deg);
+	}
+	// -----------------------------------
+	&__img2{
+		background: #000;
+		width: 120%;
+		height: 100%;
+		transform: skewX(-18deg);
+		border: 8px solid red;
+		margin-left: -10px;
+		overflow: hidden;
+	}
+	// -----------------------------------
+	&__txt{
+		position: absolute;
+		top: 0;
+		left: 5%;
+	}
+	// ---------------------------------------
+	&__main{
+		font-size: 10rem;
+		color: red;
+		line-height: 1;
+		font-weight: normal;
+		font-style: italic;
+	}
+	// ---------------------------------------
+	&__sub{
+		font-size: 2rem;
+		color: red;
+		line-height: 1;
+		text-align: right;
+		font-style: italic;
+	}
+}
+// slanted4
+// ---------------------------------------
+.p-slanted4-wrap{
+	position: relative;
+	height: 470px;
+	overflow: hidden;
+}
+// ---------------------------------------
+.p-slanted4{
+	margin-bottom: 300px;
+	height: 470px;
+	position: absolute;
+	width: 140%;
+	transform: skewY(6deg) skewX(-35deg) translate(-6%, 120px);
+	background: #ddd;
+}
+// ---------------------------------------
+.p-slanted4-1{
+	width: 65%;
+	height: 500px;
+	overflow: hidden;
+	position: absolute;
+	transform: skewY(0deg) skewX(-18deg) translate(-17%,-8px);
+	// ---------------------------------------
+	&__img{
+		transform: skewY(-6deg) skewX(43deg) translate(30%, -60px);
+		background: #000;
+		height: 110%;
+	}
+	// ---------------------------------------
+	&__bg{
+		width: 100%;
+		height: 100%;
+		background: url('https://www.dulichdaiviet.com/uploaded/muahoaanhdaonhatban-lichnohoaanhdaonhatban(1).jpg') no-repeat center;
+		background-size: cover;
+	}
+}
+// ---------------------------------------
+.p-slanted4-2{
+	width: 50%;
+	height: 400px;
+	overflow: hidden;
+	position: absolute;
+	left: 50%;
+	transform: skewY(0deg) skewX(-18deg) translate(9.4%,-22px);
+	// ---------------------------------------
+	&__img{
+		background: #000;
+		height: 110%;
+		transform: skewY(-7deg) skewX(43deg) translate(-20%, -70px);
+	}
+}

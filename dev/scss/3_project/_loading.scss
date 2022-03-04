@@ -1,0 +1,773 @@
+/*------------------------------------------------------------
+loading
+------------------------------------------------------------*/
+
+
+/*
+------------------------------------------------------------*/
+
+.c-loading {
+	width: 120px;
+	height: 120px;
+}
+
+/* c-loading1
+------------------------------------------------------------*/
+.c-loading1 {
+	background: #f2aa68;
+
+	/* .c-loading1__heart
+    ----------------------------------------*/
+	&__heart {
+		height: 30px;
+		width: 30px;
+		margin: 0 auto;
+		background-color: white;
+		transform: rotate(-45deg) translateY(-50%);
+		position: relative;
+		top: 50%;
+		left: 11%;
+		animation: heartBeat 1s ease-in-out infinite;
+
+		&:before,
+		&:after {
+			content: "";
+			background-color: white;
+			border-radius: 50%;
+			height: 30px;
+			position: absolute;
+			width: 30px;
+		}
+
+		&:before {
+			top: -17px;
+			left: 0;
+		}
+
+		&:after {
+			top: 0;
+			right: -17px;
+		}
+
+		/* Keyframes
+        ----------------------------------------*/
+		@keyframes heartBeat {
+			0% {
+				transform: rotate(-45deg) translateY(-50%) scale(0.95);
+			}
+
+			5% {
+				transform: rotate(-45deg) translateY(-50%) scale(1.1);
+			}
+
+			39% {
+				transform: rotate(-45deg) translateY(-50%) scale(0.85);
+			}
+
+			45% {
+				transform: rotate(-45deg) translateY(-50%) scale(1);
+			}
+
+			60% {
+				transform: rotate(-45deg) translateY(-50%) scale(0.95);
+			}
+
+			100% {
+				transform: rotate(-45deg) translateY(-50%) scale(0.9);
+			}
+		}
+	}
+}
+
+/* c-loading2
+------------------------------------------------------------*/
+.c-loading2 {
+	background: #5dd8a7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* .c-loading2__melody
+    ----------------------------------------*/
+	&__melody {
+		width: 7px;
+		height: 25px;
+		background: #fff;
+		display: inline-block;
+		margin-right: 4px;
+		animation: melody .8s ease-in-out infinite;
+		animation-delay: -0.48s;
+
+		&:nth-child(2) {
+			animation-delay: -0.36s;
+		}
+
+		&:nth-child(3) {
+			animation-delay: -0.24s;
+		}
+
+		&:nth-child(4) {
+			animation-delay: -0.12s;
+		}
+
+		&:last-child {
+			animation-delay: 0s;
+		}
+	}
+
+	/* Keyframes
+    ----------------------------------------*/
+	@keyframes melody {
+		0% {
+			height: 50px;
+		}
+
+		50%,
+		100% {
+			height: 25px;
+		}
+	}
+}
+
+/* c-loading3
+------------------------------------------------------------*/
+.c-loading3 {
+	background: #8999b2;
+	position: relative;
+
+	/* .c-loading3__circle
+    ----------------------------------------*/
+	&__circle {
+		width: 100px;
+		height: 100px;
+		border-radius: 100%;
+		background: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		animation: cirScale1 1s ease-in-out infinite;
+	}
+
+	/* Keyframes
+    ----------------------------------------*/
+	@keyframes cirScale1 {
+		0% {
+			transform: translate(-50%, -50%) scale(0, 0);
+			opacity: 1;
+		}
+
+		100% {
+			transform: translate(-50%, -50%) scale(1, 1);
+			opacity: 0;
+		}
+	}
+}
+
+/* c-loading4
+------------------------------------------------------------*/
+.c-loading4 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #303d70;
+
+	/* .c-loading4__circle
+    ----------------------------------------*/
+	&__circle {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		background-color: #fff;
+		opacity: 0.5;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		animation: cirScale2 2.0s infinite ease-in-out;
+
+		&:last-child {
+			animation-delay: -1s;
+		}
+	}
+
+	/* Keyframes
+    ----------------------------------------*/
+	@keyframes cirScale2 {
+		0% {
+			transform: scale(0);
+		}
+
+		50% {
+			transform: scale(1);
+		}
+
+		100% {
+			transform: scale(0);
+		}
+	}
+}
+
+/* c-loading5
+------------------------------------------------------------*/
+.c-loading5 {
+	background: #8c6805;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* .c-loading5__circle
+    ----------------------------------------*/
+	&__circle {
+		width: 100px;
+		height: 100px;
+		border: 4px solid #fff;
+		border-radius: 50%;
+		animation: 1s cirScale1 ease-out infinite;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: .5;
+
+		&:last-child {
+			animation-delay: 0.5s;
+		}
+	}
+
+	/* Keyframes
+    ----------------------------------------*/
+	@keyframes cirScale1 {
+		0% {
+			transform: translate(-50%, -50%) scale(0, 0);
+			opacity: 1;
+		}
+
+		100% {
+			transform: translate(-50%, -50%) scale(1, 1);
+			opacity: 0;
+		}
+	}
+}
+
+/* c-loading6
+------------------------------------------------------------*/
+.c-loading6 {
+	background: #ff6600;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* .c-loading6__circle
+    ----------------------------------------*/
+	&__circle {
+		width: 20px;
+		height: 20px;
+		background: #fff;
+		border-radius: 50%;
+		margin: 0 2px;
+		animation: cirScale3 1s ease-in-out infinite;
+
+		&:nth-child(2) {
+			animation-delay: .25s;
+		}
+
+		&:last-child {
+			animation-delay: .5s;
+		}
+
+		/* Keyframes
+        ----------------------------------------*/
+		@keyframes cirScale3 {
+			0% {
+				transform: scale(0);
+			}
+
+			50% {
+				transform: scale(1);
+			}
+
+			100% {
+				transform: scale(0);
+			}
+		}
+	}
+}
+
+/* c-loading7
+------------------------------------------------------------*/
+.c-loading7 {
+	background: #a87554;
+	position: relative;
+
+	/* .c-loading7__circle
+    ----------------------------------------*/
+	&__circle {
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		background: #fff;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+
+		&:first-child {
+			left: 31px;
+			animation: cirScale4 .6s infinite;
+		}
+
+		&:nth-child(2) {
+			left: 31px;
+			animation: cirScale5 .6s infinite;
+		}
+
+		&:nth-child(3) {
+			left: 51px;
+			animation: cirScale5 .6s infinite;
+		}
+
+		&:last-child {
+			left: 71px;
+			animation: cirScale6 .6s infinite;
+		}
+
+		/* Keyframes
+        ----------------------------------------*/
+		@keyframes cirScale4 {
+			0% {
+				transform: scale(0) translateY(-50%);
+			}
+
+			100% {
+				transform: scale(1) translateY(-50%);
+			}
+		}
+
+		/* Keyframes
+        ----------------------------------------*/
+		@keyframes cirScale5 {
+			0% {
+				transform: translate(0, -50%);
+			}
+
+			100% {
+				transform: translate(20px, -50%);
+			}
+		}
+
+		/* Keyframes
+        ----------------------------------------*/
+		@keyframes cirScale6 {
+			0% {
+				transform: scale(1) translateY(-50%);
+			}
+
+			100% {
+				transform: scale(0) translateY(-50%);
+			}
+		}
+	}
+}
+
+/* c-loading8
+------------------------------------------------------------*/
+.c-loading8 {
+	background: #006d12;
+
+	/* .c-loading8__wrapper
+    ----------------------------------------*/
+	&__wrapper {
+		position: relative;
+		width: 80px;
+		height: 80px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+	}
+
+	/* .c-loading8__circle
+    ----------------------------------------*/
+	&__circle {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		&:before {
+			content: '';
+			display: block;
+			margin: 0 auto;
+			width: 10px;
+			height: 10px;
+			background-color: #fff;
+			border-radius: 100%;
+			animation: cirScale7 1.2s infinite ease-in-out both;
+		}
+
+		/* Variable
+        ----------------------------------------*/
+		$default: 30deg;
+		$circle: 12;
+
+		/* Transform for nth-child
+        ----------------------------------------*/
+		@for $i from 1 through 12 {
+			&:nth-child(#{$i}) {
+				transform: rotate($default * $i);
+			}
+		}
+
+		/* Animation delay for nth-child
+        ----------------------------------------*/
+		@while $circle>0 {
+			&:nth-child(#{$circle}):before {
+				animation-delay: ($circle * 0.1s) + (-0.2);
+				$circle: $circle - 1;
+			}
+		}
+
+		/* Keyframes
+        ----------------------------------------*/
+		@keyframes cirScale7 {
+
+			0%,
+			80%,
+			100% {
+				transform: scale(0)
+			}
+
+			40% {
+				transform: scale(1)
+			}
+		}
+	}
+}
+
+/* c-loading9
+------------------------------------------------------------*/
+.c-loading9 {
+	background: #369ec4;
+	position: relative;
+
+	/* .c-loading9__circle
+    ----------------------------------------*/
+	&__circle {
+		width: 90px;
+		height: 90px;
+		border: 5px solid rgba(255, 255, 255, .2);
+		border-left: 5px solid #fff;
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		animation: cirRotate1 2s linear infinite;
+		/* Keyframes
+        ----------------------------------------*/
+		@keyframes cirRotate1 {
+			from {
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	}
+}
+
+/* c-loading10
+------------------------------------------------------------*/
+.c-loading10 {
+	background: #0dc5c1;
+	position: relative;
+
+	/* .c-loading10__circle
+    ----------------------------------------*/
+	&__circle {
+		box-shadow: inset 0 0 0 10px;
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		color: #fff;
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			border-radius: 50%;
+			background: #0dc5c1;
+			width: 52%;
+			height: 102%;
+		}
+
+		&:before {
+			border-radius: 102% 0 0 102%;
+			top: -1px;
+			left: -1px;
+			transform-origin: 52px 51px;
+			animation: cirRotate2 2s infinite ease 1.5s;
+		}
+
+		&:after {
+			border-radius: 0 102% 102% 0;
+			top: -1px;
+			left: 51px;
+			transform-origin: 0 51px;
+			animation: cirRotate2 2s infinite ease;
+		}
+
+		/* Keyframes
+        ----------------------------------------*/
+		@keyframes cirRotate2 {
+			from {
+				transform: rotate(0)
+			}
+
+			to {
+				transform: rotate(360deg);
+			}
+		}
+	}
+}
+
+/* c-loading11
+------------------------------------------------------------*/
+.c-loading11 {
+	background: #f60;
+	position: relative;
+
+	/* .c-loading11__square
+    ----------------------------------------*/
+	&__square {
+		width: 50px;
+		height: 50px;
+		background: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		animation: square1 1.2s ease-in-out infinite;
+	}
+
+	/* Keyframes
+    ----------------------------------------*/
+	@keyframes square1 {
+		0% {
+			transform: perspective(300px) translate(-50%, -50%) rotateY(0) rotateX(0);
+		}
+
+		50% {
+			transform: perspective(300px) translate(-50%, -50%) rotateY(180deg) rotateX(0);
+		}
+
+		100% {
+			transform: perspective(300px) translate(-50%, -50%) rotateY(180deg) rotateX(180deg);
+		}
+	}
+}
+
+/* c-loading12
+------------------------------------------------------------*/
+.c-loading12 {
+	background: #0dc5c1;
+	$width: 50px;
+
+	/* .c-loading12__wrapper
+    ----------------------------------------*/
+	&__wrapper {
+		position: relative;
+		width: $width;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+
+	/* .c-loading12__square
+    ----------------------------------------*/
+	&__square {
+		width: calc(#{$width} /2);
+		height: calc(#{$width} /2);
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 105%;
+			height: 105%;
+			background-color: #fff;
+			;
+			animation: square2 2s linear infinite;
+			transform-origin: 100% 100%;
+		}
+
+		&:nth-child(2) {
+			transform: rotateZ(90deg);
+
+			&:before {
+				animation-delay: 0.3s;
+			}
+		}
+
+		&:nth-child(3) {
+			transform: rotateZ(270deg);
+
+			&:before {
+				animation-delay: 0.9s;
+			}
+		}
+
+		&:last-child {
+			transform: rotateZ(180deg);
+
+			&:before {
+				animation-delay: 0.6s;
+			}
+		}
+
+		/* Keyframes
+        ----------------------------------------*/
+		@keyframes square2 {
+
+			0%,
+			10% {
+				transform: perspective(140px) rotateX(-180deg);
+				opacity: 0
+			}
+
+			25%,
+			75% {
+				transform: perspective(140px) rotateX(0deg);
+				opacity: 1
+			}
+
+			90%,
+			100% {
+				transform: perspective(140px) rotateY(180deg);
+				opacity: 0
+			}
+		}
+	}
+}
+
+/* c-loading13
+------------------------------------------------------------*/
+.c-loading13 {
+	background: #f60;
+	$width: 60px;
+
+	/* .c-loading13__wrapper
+    ----------------------------------------*/
+	&__wrapper {
+		width: $width;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	/* .c-loading13__square
+    ----------------------------------------*/
+	&__square {
+		width: calc(#{$width} / 3);
+		height: calc(#{$width} / 3);
+		position: relative;
+		background: #fff;
+		animation: square3 1.5s linear infinite;
+
+		&:nth-child(3) {
+			animation-delay: .4s;
+		}
+
+		&:nth-child(8),
+		&:nth-child(4) {
+			animation-delay: .1s;
+		}
+
+		&:nth-child(1),
+		&:nth-child(5),
+		&:nth-child(9) {
+			animation-delay: .2s;
+		}
+
+		&:nth-child(2),
+		&:nth-child(6) {
+			animation-delay: .3s;
+		}
+
+		/* Keyframes
+        ----------------------------------------*/
+		@keyframes square3 {
+
+			0%,
+			70%,
+			100% {
+				transform: scale3D(1, 1, 1)
+			}
+
+			35% {
+				transform: scale3D(0, 0, 1)
+			}
+		}
+	}
+}
+
+.c-loading14 {
+	display: block;
+    position: relative;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: #df95b5;
+	animation: cirRotate3 2s linear infinite;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		right: 5px;
+		bottom: 5px;
+		border-radius: 50%;
+		border: 2px solid transparent;
+		border-top-color: #e4b2ba;
+		animation: cirRotate3 3s linear infinite;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 12px;
+		left: 12px;
+		right: 12px;
+		bottom: 12px;
+		border-radius: 50%;
+		border: 2px solid transparent;
+		border-top-color: #a3cef8;
+		animation: cirRotate3 1.5s linear infinite;
+	}
+
+	@keyframes cirRotate3 {
+		0% {
+			transform: rotate(0);
+		}
+
+		100% {
+			transform: rotate(1turn);
+		}
+	}
+}

@@ -1,0 +1,165 @@
+/*------------------------------------------------------------
+accordion
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-ac1 {
+	min-width: 200px;
+
+	//--------------------------------------------------------
+	&__title {
+		margin-top: 20px;
+		cursor: pointer;
+		border: 1px solid #ccc;
+		background: #efefef;
+		padding: 5px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	//--------------------------------------------------------
+	&__body {
+		display: none;
+		border: 1px solid #ccc;
+		border-top: 0px;
+		padding: 5px;
+	}
+}
+
+/*
+------------------------------------------------------------*/
+.c-ac2 {
+	min-width: 200px;
+
+	//--------------------------------------------------------
+	&__title {
+		margin-top: 20px;
+		cursor: pointer;
+		border: 1px solid #ccc;
+		background: #efefef;
+		padding: 5px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	//--------------------------------------------------------
+	&__body {
+		display: none;
+		border: 1px solid #ccc;
+		border-top: 0px;
+		padding: 5px;
+	}
+}
+
+/*
+------------------------------------------------------------*/
+.c-ac3 {
+	min-width: 200px;
+
+	//--------------------------------------------------------
+	&__title {
+		margin-top: 20px;
+		cursor: pointer;
+		border: 1px solid #ccc;
+		background: #efefef;
+		padding: 5px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	//--------------------------------------------------------
+	&__body {
+		display: none;
+		border: 1px solid #ccc;
+		border-top: 0px;
+		padding: 5px;
+	}
+
+	//--------------------------------------------------------
+	&__btn {
+		cursor: pointer;
+		border: 1px solid #ccc;
+		padding: 3px;
+		line-height: 1;
+		border-radius: 5px;
+		display: inline-block;
+		background: #efefef;
+	}
+}
+
+/*
+------------------------------------------------------------*/
+.c-ac4 {
+	$root: &;
+	min-width: 200px;
+
+	//--------------------------------------------------------
+	&__title {
+		margin-top: 20px;
+		cursor: pointer;
+		border: 1px solid #ccc;
+		background: #efefef;
+		padding: 5px;
+		position: relative;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			border-top: 2px solid #666;
+			border-right: 2px solid #666;
+			width: 8px;
+			height: 8px;
+			top: 50%;
+			right: 10px;
+			transform: translateY(-6px) rotate(135deg);
+		}
+
+		// open
+		//----------------------------------------------------
+		&.is-open {
+			&:after {
+				transform: translateY(-2px) rotate(-45deg);
+			}
+		}
+	}
+
+	//--------------------------------------------------------
+	&__body {
+		display: none;
+		border: 1px solid #ccc;
+		border-top: 0px;
+		padding: 5px;
+	}
+}
+
+/*
+------------------------------------------------------------*/
+.c-ac5 {
+	min-width: 200px;
+
+	//--------------------------------------------------------
+	&__title {
+		margin-top: 20px;
+		cursor: pointer;
+		border: 1px solid #ccc;
+		background: #efefef;
+		padding: 5px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	//--------------------------------------------------------
+	&__body {
+		display: none;
+		border: 1px solid #ccc;
+		border-top: 0px;
+		padding: 5px;
+	}
+}

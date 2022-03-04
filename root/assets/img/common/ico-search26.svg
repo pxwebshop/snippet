@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>ico-search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="tpl/header/header" transform="translate(-1077.000000, -159.000000)">
+            <g id="Group-16" transform="translate(1076.000000, 157.000000)">
+                <g id="Group-8" transform="translate(9.896769, 10.984664) rotate(-30.000000) translate(-9.896769, -10.984664) translate(3.896769, 1.984664)">
+                    <path d="M6.4493279,10.0279723 C8.61830073,10.0279723 10.3766006,8.2696724 10.3766006,6.10069956 C10.3766006,3.93172672 8.61830073,2.17342683 6.4493279,2.17342683 C4.28035506,2.17342683 2.52205517,3.93172672 2.52205517,6.10069956 C2.52205517,8.2696724 4.28035506,10.0279723 6.4493279,10.0279723 Z M6.4493279,11.555245 C3.43686562,11.555245 0.994782441,9.11316183 0.994782441,6.10069956 C0.994782441,3.08823729 3.43686562,0.646154105 6.4493279,0.646154105 C9.46179017,0.646154105 11.9038734,3.08823729 11.9038734,6.10069956 C11.9038734,9.11316183 9.46179017,11.555245 6.4493279,11.555245 Z" id="Oval-3" fill="#000000" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" fill="#333333" x="5.3584188" y="10.4643359" width="2.18181818" height="6.54545455"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

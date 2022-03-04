@@ -1,0 +1,24 @@
+/*------------------------------------------------------------
+text
+------------------------------------------------------------*/
+
+/* 
+------------------------------------------------------------*/
+.c-text1 {
+    width: 980px;
+    margin: 0 auto;
+    color: #000;
+
+    &.is-mask {
+        background: url('/assets/img/common/text1.jpg') no-repeat;
+        background-size: 100% 100%;
+        color: transparent;
+        -webkit-background-clip: text;
+
+    }
+    p {
+        font-size: 4rem;
+        line-height: 6rem;
+        display: inline;
+    }
+}

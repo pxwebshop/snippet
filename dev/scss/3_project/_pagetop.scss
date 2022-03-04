@@ -1,0 +1,203 @@
+/*------------------------------------------------------------
+pagetop
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-pagetop1 {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: none;
+    cursor: pointer;
+    text-align: center;
+    background: #1565c0;
+    line-height: 1.5;
+    padding: 10px 30px;
+    color: #fff;
+}
+
+/*
+------------------------------------------------------------*/
+.c-pagetop2 {
+    position: fixed;
+    z-index: 2000;
+    right: 30px;
+    bottom: 150px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-pagetop3 {
+    position: absolute;
+    z-index: 2000;
+    right: 30px;
+    bottom: 25px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    a {
+        font-family: "bodoni-urw", Georgia, Times, Baskerville, Palatino, serif;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 0;
+        background-image: url(/assets/img/common/btn_pagetop.png);
+        background-repeat: no-repeat;
+        background-size: 12px auto;
+        background-position: left top 8px;
+        padding-left: 22px;
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-pagetop4 {
+    right: 30px;
+    bottom: 25px;
+    transition: 0.2s ease-in-out;
+    width: 40px;
+    height: 40px;
+    display: block;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    svg {
+        transform-origin: center;
+        transform: rotate(180deg);
+        display: block;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        visibility: inherit;
+        opacity: 1;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-pagetop5 {
+    position: absolute;
+    bottom: 40px;
+    right: 130px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    a {
+        display: block;
+        position: relative;
+        &:hover {
+            opacity: 1;
+            &::before {
+                transform: scale(1.1);
+            }
+            span {
+                animation-name: pagetop5;
+                animation-duration: 0.5s;
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+        }
+        &::before {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: 10px;
+            margin-left: -40px;
+            background-color: #0b0013;
+            border-radius: 100%;
+            transition-property: transform, -webkit-transform;
+            transition-duration: 0.25s;
+            transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        span {
+            position: absolute;
+            top: 35px;
+            left: 50px;
+            svg {
+                position: absolute;
+                fill: #fff;
+                stroke: #fff;
+                stroke-width: 0;
+                font-size: 32px;
+            }
+        }
+    }
+    @keyframes pagetop5 {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        51% {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-pagetop6 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    width: 90px;
+    a {
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+        z-index: 10;
+        display: block;
+        width: 90px;
+        height: 30px;
+        padding-top: 9px;
+        font-style: italic;
+        font-size: 1.4rem;
+        color: #000;
+        text-decoration: none;
+        transition: 0.25s all cubic-bezier(0.215, 0.61, 0.355, 1);
+        &:hover {
+            &::after {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                content: "";
+                display: block;
+                background: url(/assets/img/common/pagetop_ov.png) 0 100% no-repeat;
+                width: 10px;
+                height: 52px;
+                margin-right: auto;
+            }
+        }
+        &::after {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            content: "";
+            display: block;
+            background: url(/assets/img/common/pagetop.png);
+            width: 10px;
+            height: 32px;
+            transition: 0.25s all cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+    }
+}

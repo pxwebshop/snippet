@@ -1,0 +1,26 @@
+/*------------------------------------------------------------
+wp-pagenavi
+------------------------------------------------------------*/
+
+/* 
+------------------------------------------------------------*/
+.c-wp-pagenavi1 {
+	display: flex;
+	justify-content: center;
+	a,
+	span {
+		text-decoration: none;
+		display: inline-block;
+		padding: 3px 10px;
+		margin: 2px;
+		font-size: 85%;
+		color: #212b60;
+		font-size: 14px;
+		border: 1px solid #dddddd;
+	}
+	a:hover,
+	span.current {
+		background-color: #eeeeee;
+		color: #333;
+	}
+}

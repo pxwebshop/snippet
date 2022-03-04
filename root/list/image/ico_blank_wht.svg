@@ -1,0 +1,11 @@
+<svg id="ico_blank_wht.svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="icn" class="cls-1" d="M1134,1648v-16h22v16h-22Zm20-13h-18v11h18v-11Zm-22,17h-2v-13h2v11h18v2h-18Z" transform="translate(-1130 -1632)"/>
+</svg>

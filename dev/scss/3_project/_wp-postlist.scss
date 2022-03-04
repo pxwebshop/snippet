@@ -1,0 +1,119 @@
+/*------------------------------------------------------------
+wp-postlist
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-wp-postlist1 {
+	border-top: 1px solid #ccc;
+	&__card {
+		border-bottom: 1px solid #ccc;
+		padding: 15px 5px;
+		display: flex;
+		font-size: 1.2rem;
+	}
+	&__date {
+		width: 7.5em;
+	}
+	&__category {
+		width: 7em;
+		margin-right: 15px;
+		background: #ccc;
+		border-radius: 5px;
+		padding: 1px 3px;
+		text-align: center;
+		font-size: 1rem;
+	}
+	&__title {
+	}
+}
+
+/*
+------------------------------------------------------------*/
+.c-wp-postlist2 {
+	border-top: 1px solid #ccc;
+	&__card {
+		border-bottom: 1px solid #ccc;
+		padding: 15px 5px;
+		display: flex;
+		align-items: center;
+		font-size: 1.2rem;
+	}
+	&__image {
+		margin-right: 20px;
+	}
+	&__text {
+	}
+	&__info {
+		display: flex;
+		margin-bottom: 5px;
+	}
+	&__date {
+		width: 7.5em;
+		font-size: 1.2rem;
+	}
+	&__category {
+		width: 7em;
+		margin-right: 15px;
+		background: #ccc;
+		border-radius: 5px;
+		padding: 1px 3px;
+		text-align: center;
+		font-size: 1rem;
+	}
+	&__title {
+	}
+}
+
+/*
+------------------------------------------------------------*/
+.c-wp-postlist3 {
+	display: flex;
+	flex-wrap: wrap;
+	&__card {
+		font-size: 1.2rem;
+		width: 200px;
+		margin: 0 15px 15px 0;
+	}
+	&__image {
+		margin-bottom: 10px;
+	}
+	&__text {
+	}
+	&__info {
+		display: flex;
+		margin-bottom: 10px;
+	}
+	&__date {
+		width: 7.5em;
+		font-size: 1.2rem;
+	}
+	&__category {
+		width: 7em;
+		margin-right: 15px;
+		background: #ccc;
+		border-radius: 5px;
+		padding: 1px 3px;
+		text-align: center;
+		font-size: 1rem;
+	}
+	&__title {
+	}
+}
+
+/*
+------------------------------------------------------------*/
+.c-wp-postlist4 {
+	border-top: 1px solid #ccc;
+	&__card {
+		border-bottom: 1px solid #ccc;
+		padding: 15px 5px;
+		display: flex;
+		font-size: 1.2rem;
+	}
+	&__date {
+		width: 7.5em;
+	}
+	&__title {
+	}
+}

@@ -1,0 +1,283 @@
+/*------------------------------------------------------------
+wp-mwwpform
+------------------------------------------------------------*/
+
+/* index
+------------------------------------------------------------*/
+.p-mwwpform {
+	ul {
+		margin: 0 0 0 1.5em;
+	}
+	li {
+		list-style-type: disc;
+	}
+	li + li {
+		margin-top: 10px;
+	}
+}
+
+/*
+------------------------------------------------------------*/
+.p-mwwpform001 {
+	//--------------------------------------------------------
+	&-1 {
+		input {
+			width: 200px;
+			margin-top: 5px;
+			border: 1px solid #ccc;
+			appearance: none;
+			padding: 3px;
+		}
+	}
+	//--------------------------------------------------------
+	&-2 {
+		margin-top: 40px;
+		padding-top: 40px;
+		border-top: 1px solid #ccc;
+		&__text1 {
+			margin-bottom: 10px;
+		}
+		&__text2 {
+			margin-top: 10px;
+		}
+	}
+
+	//--------------------------------------------------------
+	&-3 {
+		margin-top: 40px;
+		padding-top: 40px;
+		border-top: 1px solid #ccc;
+		p {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+/*
+------------------------------------------------------------*/
+.p-mwwpform002 ,.p-mwwpform003 {
+	//--------------------------------------------------------
+	// &-1 {
+	// 	input {
+	// 		width: 200px;
+	// 		margin-top: 5px;
+	// 		border: 1px solid #ccc;
+	// 		appearance: none;
+	// 		padding: 3px;
+	// 	}
+	// }
+	// //--------------------------------------------------------
+	// &-2 {
+	// 	margin-top: 40px;
+	// 	padding-top: 40px;
+	// 	border-top: 1px solid #ccc;
+	// 	&__text1 {
+	// 		margin-bottom: 10px;
+	// 	}
+	// 	&__text2 {
+	// 		margin-top: 10px;
+	// 	}
+	// }
+	/*
+------------------------------------------------------------*/
+.c-form{
+	width:1120px;
+	margin:0 auto;
+	@include sp{
+		width:100%;
+	}
+    &__row{
+        display: flex;
+        border-bottom: 1px solid #dddddd;
+        @include sp{
+            flex-direction: column;
+        }
+        &:first-child{
+            border-top: 1px solid #dddddd;
+        }
+    }
+    //-------------------------------------------------------
+    &__colleft{
+        padding: 0px 29px 0px 31px;
+        background: #f2f5fa;
+        width: 250px;
+        display: inline-flex;
+        align-items: center;
+        @include sp{
+            width: 100%;
+            padding: 10px;
+            justify-content: space-between;
+        }
+        label{
+            font-size: 1.4rem;
+            font-family: "Noto Sans";
+            font-weight: 700;
+            color: #000000;
+        }
+    }
+    //-------------------------------------------------------
+    &__colright{
+        padding: 15px 30px 16px 31px;
+        width: calc(100% - 250px);
+        position: relative;
+        @include sp {
+          width: 100%;
+        }
+        &__box{
+            display:flex;
+            > div {
+                @include sp{
+                    display:flex;
+                    align-items: center;
+                    width:50%;
+                    .c-form__labelname{
+                        text-align: center;
+                        width:26%;
+                        margin-bottom: 0;
+                    }
+                    .c-form__colright__text{
+                        width: 67%;
+                        input{
+                            margin-right:0;
+                        }
+                    }
+                    &:nth-child(2){
+                        margin-left:2%;
+                    }
+                }
+            }
+        }
+        @include sp{
+            padding: 15px 10px;
+            border-top: 1px solid #dddddd;
+        }
+        &__text{
+            font-size: 1.4rem;
+            font-family: "Noto Sans";
+            font-weight: 400;
+            color: #000000;
+            input,span{
+                vertical-align: middle;
+            }
+        }
+        //-------------------------------------------------------
+        label{
+            font-size: 1.4rem;
+            font-family: "Noto Sans";
+            font-weight: 400;
+            color: #000000;
+            margin-top: -5px;
+        }
+        //-------------------------------------------------------
+        input[type=text]{
+            ::placeholder{
+                color: #999999;
+            }
+        }
+        //-------------------------------------------------------
+        input, textarea{
+            padding: 0 15px;
+            height: 35px;
+            font-size: 1.4rem;
+            color: #000000;
+            box-sizing: border-box;
+            font-family: "Noto Sans";
+            font-weight: 400;
+            background: #f6f6f6;
+			border:1px solid #cccccc;
+			
+        }
+        textarea{
+            padding:15px;
+        }
+        //-------------------------------------------------------
+        textarea{
+            margin-top: 13px;
+            display: block;
+            resize: none;
+            min-height: 120px;
+        }
+    }
+    //-------------------------------------------------------
+    &__name{
+        width: 100%;  
+        @include sp{
+            width: 100%;
+        }
+    }
+
+    //-------------------------------------------------------
+    &__biggest{
+		width: 100%;  
+        @include sp{
+            width: 100%;
+        }
+    }
+    //-------------------------------------------------------
+    &__error , .error{
+        font-size: 1.4rem;
+        color: #c70025;
+        font-family: "Noto Sans";
+        font-weight: 400;
+        padding-top: 7px;
+    }
+   
+}
+/*
+------------------------------------------------------------*/
+.c-form-btn{
+	margin-top:50px;
+	display: inline-block;
+    font-size: 1.6rem;
+    color: #fff;
+    background: #c70025;
+    border:none;
+    height: 54px;
+    padding: 0 40px;
+    font-family: "Noto Sans";
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    @include sp{
+        height:40px;
+        font-size:1.4rem;
+    }
+    &:hover{
+        opacity: 1;
+        color: #c70025;
+        background: #fff;
+        border: 1px solid #ccc;
+    }
+    &__box{
+       text-align: center;
+    }
+}
+
+}
+/*.p-mwwpform002
+------------------------------------------------------------*/
+.p-mwwpform002{
+    .error{
+        margin-top:10px;
+    }
+}
+/*.p-mwwpform003
+------------------------------------------------------------*/
+.p-mwwpform003{
+    .mw_wp_form .error{
+        margin-top:0;
+        display: flex;
+        flex-wrap: wrap;
+        .c-form__name{
+            border: 1px solid #c70025;
+        }
+    }
+    .formErrorContent{
+        margin-top:10px;
+    }
+    .formError{
+        order:2;
+    }
+}

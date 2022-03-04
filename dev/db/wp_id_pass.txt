@@ -1,0 +1,3 @@
+http://snippet.cd/wp/wp-admin
+USER : admin
+PASS : admin

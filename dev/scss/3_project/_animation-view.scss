@@ -1,0 +1,701 @@
+/*------------------------------------------------------------
+Animation View
+------------------------------------------------------------*/
+.page-animation-view {
+	.c-gl-box {
+		width: 100%;
+	}
+}
+
+/* c-animation-view1
+------------------------------------------------------------*/
+.c-animation-view1 {
+	$root: &;
+	position: relative;
+	width: 100%;
+	height: 480px;
+	background: url("/assets/img/common/view1.jpg") no-repeat center right #dae5ea;
+	margin-bottom: 40px;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		transition: transform 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+		transform: scale(1, 1);
+		transform-origin: right top;
+	}
+
+	&:before {
+		transition-delay: .5s;
+		background: #ccc;
+		z-index: 1;
+	}
+
+	&:after {
+		transition-delay: .3s;
+		background: white;
+		z-index: 2;
+	}
+
+	&.is-scroll {
+
+		&:before,
+		&:after {
+			transform: scale(0, 1);
+		}
+	}
+
+	.c-animation-view2 {
+		position: absolute;
+		top: -35px;
+		left: 100px;
+		width: 640px;
+		box-sizing: border-box;
+		padding: 12%;
+		background: rgba(0, 73, 134, 0.9);
+		color: #fff;
+		transition: transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s, box-shadow 0.5s ease-out 1.8s;
+		box-shadow: 40px 40px 80px transparent;
+		transform: scale(0, 1);
+		transform-origin: left top;
+	}
+}
+
+/* c-animation-view2
+------------------------------------------------------------*/
+.c-animation-view2 {
+	width: 640px;
+	box-sizing: border-box;
+	padding: 12%;
+	background: rgba(0, 73, 134, 0.9);
+	color: #fff;
+	transition: transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s, box-shadow 0.5s ease-out 1.8s;
+	box-shadow: 40px 40px 80px transparent;
+	transform: scale(0, 1);
+	transform-origin: left top;
+
+	&.is-scroll {
+		box-shadow: 40px 40px 80px rgba(0, 0, 0, 0.1);
+		transform: scale(1, 1);
+	}
+}
+
+/* c-animation-view3
+------------------------------------------------------------*/
+
+.c-animation-view3 {
+	width: 400px;
+	height: 300px;
+	position: relative;
+	background: #fff;
+	box-shadow: 0 7px 15px rgba(0, 0, 0, .2);
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 100%;
+		bottom: 0;
+		background: #000;
+		z-index: 1;
+		transition: left 0.7s cubic-bezier(0.77, 0, 0.175, 1) 0.4s, right 0.7s 0.2s;
+	}
+
+	&.is-active {
+		&:before {
+			left: 100%;
+			right: 0%;
+		}
+	}
+}
+
+
+/* c-animation-view4
+------------------------------------------------------------*/
+
+.c-animation-view4 {
+	$root: &;
+
+	&.is-animation {
+		#{$root}__link {
+			&:before {
+				width: 100%;
+			}
+		}
+
+		img {
+			left: 0;
+			opacity: 1;
+		}
+
+		#{$root}__txt {
+			opacity: 1;
+		}
+	}
+
+	&__link {
+		width: 475px;
+		position: relative;
+		display: block;
+		overflow: hidden;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background: #403999;
+			transition: all 1s ease-out;
+		}
+
+		&:hover {
+			#{$root}__txt {
+				&:before {
+					animation: hover 1s;
+				}
+			}
+		}
+	}
+
+	img {
+		position: relative;
+		top: 0;
+		left: -100%;
+		opacity: 0;
+		transition: all 1s .5s;
+		transition-timing-function: cubic-bezier(0, 0.9, 1);
+	}
+
+	&__txt {
+		position: absolute;
+		bottom: 60px;
+		left: 2.5vw;
+		background: #403999;
+		padding: 10px 20px;
+		opacity: 0;
+		transition: all 1s 1.5s;
+		overflow: hidden;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 0;
+			height: 0;
+			background-color: rgba(255, 255, 255, 0.3);
+			transform: translate(-50%, -50%);
+			opacity: 0;
+		}
+
+		@keyframes hover {
+			50% {
+				opacity: 1;
+			}
+
+			100% {
+				width: 100%;
+				height: 300px;
+			}
+		}
+
+		span {
+			font-size: 3.2rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: #fff;
+		}
+	}
+}
+
+/* c-animation-view5
+------------------------------------------------------------*/
+
+.c-animation-view5 {
+	$root: &;
+	overflow: hidden;
+	opacity: 0;
+
+	&.is-animation {
+		#{$root}__inner {
+			&:before {
+				position: absolute;
+				bottom: -110%;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #403999;
+				opacity: 0;
+				animation: BotToTop .75s forwards;
+			}
+		}
+
+		@keyframes BotToTop {
+			0% {
+				bottom: -110%;
+				opacity: 0;
+			}
+
+			50% {
+				bottom: 0;
+				opacity: 1;
+			}
+
+			100% {
+				bottom: 100%;
+				opacity: 1;
+			}
+		}
+
+		animation: opacityTitle .5s forwards;
+
+		@keyframes opacityTitle {
+
+			0% {
+				opacity: 0;
+			}
+
+			49% {
+				opacity: 0;
+			}
+
+			50% {
+				opacity: 1;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__inner {
+		position: relative;
+		border-bottom: 2px solid #d6d4f3;
+
+		&:before,
+		&:after {
+			content: '';
+		}
+
+		&:after {
+			position: absolute;
+			width: 36%;
+			height: 2px;
+			bottom: -2px;
+			left: 0;
+			background: #403999;
+		}
+	}
+
+	&__ttl {
+		font-size: 2.3rem;
+		padding-bottom: 10px;
+	}
+}
+
+/* c-animation-view6
+------------------------------------------------------------*/
+
+.c-animation-view6 {
+	$root: &;
+
+	&.is-animation {
+		#{$root}__inner {
+			span {
+				transform: translateY(0em) translateZ(0px);
+			}
+		}
+	}
+
+	&__ttl {
+		font-size: 8rem;
+		line-height: 1;
+	}
+
+	&__inner {
+		display: inline-block;
+		overflow: hidden;
+		width: 100%;
+
+		span {
+			display: inline-block;
+			opacity: 1;
+			transform: translateY(16rem) translateZ(0px);
+			transition: all .55s cubic-bezier(0.25, 0.1, 0.24, 1.2);
+			letter-spacing: -28px;
+		}
+
+		&:first-child {
+			span {
+				&:nth-child(2) {
+					transition-delay: .1s
+				}
+
+				&:last-child {
+					transition-delay: .2s
+				}
+			}
+		}
+
+		&:last-child {
+			span {
+				&:first-child {
+					transition-delay: .25s
+				}
+
+				&:nth-child(2) {
+					transition-delay: .3s
+				}
+
+				&:nth-child(3) {
+					transition-delay: .5s
+				}
+
+				&:nth-child(4) {
+					transition-delay: .6s
+				}
+
+				&:nth-child(5) {
+					transition-delay: .7s
+				}
+
+				&:nth-child(6) {
+					transition-delay: .8s
+				}
+
+				&:nth-child(7) {
+					transition-delay: .9s
+				}
+
+				&:last-child {
+					transition-delay: 1s
+				}
+			}
+		}
+	}
+}
+
+/* c-animation-view7
+------------------------------------------------------------*/
+.c-animation-view7 {
+	position: relative;
+	z-index: 1;
+	width: 680px;
+	height: 680px;
+	animation: transform 25s ease-in-out infinite both alternate;
+	transform-style: preserve-3d;
+	overflow: hidden;
+
+	@keyframes transform {
+
+		0%,
+		100% {
+			border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+		}
+
+		14% {
+			border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+		}
+
+		28% {
+			border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+		}
+
+		42% {
+			border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+		}
+
+		56% {
+			border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+		}
+
+		70% {
+			border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+		}
+
+		84% {
+			border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+		}
+	}
+}
+
+/* c-animation-view8
+------------------------------------------------------------*/
+.c-animation-view8 {
+	$root: &;
+	$class: c-animation-view8 !default;
+
+	&__ttl {
+		font-size: 22px;
+		font-weight: 700;
+		position: relative;
+		margin-bottom: 104px;
+		padding-bottom: 35px;
+		text-align: center;
+
+		span {
+			display: inline-block;
+			opacity: 0;
+			transition-timing-function: cubic-bezier(.3, .4, .1, 1);
+			transition-duration: .6s;
+			transform: translate3d(60px, -10px, 80px) rotateY(-80deg);
+		}
+	}
+
+	&__line {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 36px;
+		height: 3px;
+		margin: 0 auto;
+		transition-timing-function: cubic-bezier(.3, .4, .1, 1);
+		transition-duration: .6s;
+		transform: translate3d(-20px, 0, 0) scaleX(.5);
+		transform-origin: left;
+		border-radius: 1.5px;
+		background: #1f2533;
+		opacity: 0;
+	}
+
+	&.is-animation {
+		#{$root}__ttl {
+			span {
+				transition-timing-function: cubic-bezier(.3, .4, .1, 1);
+				transform: translate3d(0, 0, 0) rotateY(0);
+				opacity: 1;
+			}
+		}
+
+		#{$root}__line {
+			transition-delay: .1s;
+			transform: translate3d(0, 0, 0) scaleX(1);
+			opacity: 1;
+		}
+	}
+
+	@for $i from 1 through 4 {
+		.#{$class}__#{$i} {
+			transition-delay: $i * 50ms;
+		}
+	}
+}
+
+/* c-animation-view9
+------------------------------------------------------------*/
+.c-animation-view9 {
+	button {
+		display: block;
+		margin: 0 auto;
+		padding: 0;
+		border: none;
+		background: #fff;
+
+		span {
+			display: inline-block;
+			background: #ffffff;
+			white-space: nowrap;
+			overflow: hidden;
+			cursor: pointer;
+			font-size: 2.1rem;
+			width: 100px;
+		}
+
+		&:after {
+			content: " ";
+			display: inline-block;
+			width: 12px;
+			opacity: 0;
+			border-bottom: 1px solid #000;
+			vertical-align: bottom;
+		}
+
+		&:hover {
+			opacity: .5;
+
+			&:after {
+				animation: pointer 1s step-end infinite;
+			}
+		}
+
+		@keyframes pointer {
+
+			0%,
+			to {
+				opacity: 1
+			}
+
+			50% {
+				opacity: 0
+			}
+		}
+
+		&.is-animation {
+			span {
+				animation: typing 3s steps(20, end);
+			}
+		}
+
+		@keyframes typing {
+			0% {
+				width: 100px;
+			}
+
+			25% {
+				width: 0;
+			}
+		}
+
+		&.is-loading {
+			opacity: .5;
+
+			&:after {
+				animation: pointer 1s step-end infinite;
+			}
+		}
+	}
+}
+
+/* c-animation-view10
+------------------------------------------------------------*/
+.c-animation-view10 {
+	position: relative;
+	display: inline-block;
+	&__txt {
+		position: relative;
+		z-index: 2;
+		font-size: 5.9vw;
+	}
+	&__svg {
+		position: absolute;
+		top: 63%;
+		left: 0;
+		right: 0;
+		transform: scaleX(0);
+		transition: transform .45s cubic-bezier(.4,0,0,1);
+		transform-origin: center left;
+
+		svg {
+			display: block;
+			width: 100%;
+			height: 20%;
+			fill: #abcfc1;
+		}
+	}
+	&.is-animation {
+		.c-animation-view10__svg {
+			transform: scaleX(1);
+			transition-delay: .3s;
+		}
+	}
+}
+
+/* c-animation-view11
+------------------------------------------------------------*/
+.c-animation-view11 {
+	$root: &;
+	position: relative;
+	min-height: 42vw;
+
+	& > * {
+		bottom: 0;
+	}
+
+	&.is-show {
+		#{$root}__box1 {
+			animation: scale1 2s forwards cubic-bezier(.33,.04,.1,1);
+		}
+		#{$root}__box2 {
+			animation: scale2 2s forwards cubic-bezier(.33,.04,.1,1);
+		}
+		#{$root}__img {
+			opacity: 1;
+		}
+	}
+
+	&__box1 {
+		width: 792px;
+		height: 446px;
+		margin-left: 140px;
+		position: absolute;
+		left: 0;
+		transform-origin: top right;
+		// animation: scale1 2s forwards cubic-bezier(.33,.04,.1,1);
+		transform: translate(-8rem) scale(.75);
+		#{$root}__bg {
+			background-color: #8aa29a;
+			padding-top: 56.25%;
+		}
+	}
+
+	@keyframes scale1 {
+		0%, 40% {
+			transform: translate(-8rem) scale(.75);
+		}
+		60%, 80% {
+			transform: translate(-8rem) scale(1);
+		}
+		100% {
+			transform: translate(0) scale(1);
+		}
+	}
+
+	&__box2 {
+		position: absolute;
+		left: 0;
+		margin-left: 140px;
+		// animation: scale2 2s forwards cubic-bezier(.33,.04,.1,1);
+		transform-origin: center;
+		transform: translate(6rem) scale(.75);
+
+		@keyframes scale2 {
+			0%, 40% {
+				transform: translate(6rem) scale(.75);
+			}
+			60% {
+				transform: translate(6rem) scale(1);
+			}
+			80% {
+				transform: translate(6rem) scale(1);
+			}
+			100% {
+				transform: translate(0) scale(1);
+			}
+		}
+
+		#{$root}__bg {
+			background-color: #644b32;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+		}
+
+		#{$root}__img {
+			width: 654px;
+			height: 800px;
+			background-position: 50% 50%;
+			background-size: cover;
+			background-image: url(https://implementconsultinggroup.com/media/1725/project-manager-02.jpg?quality=88&width=672&height=830&mode=crop&center=0.5%2C0.5);
+			background-repeat: no-repeat;
+			transition: opacity .54s linear;
+			transition-delay: 2s;
+			opacity: 0;
+			z-index: 1;
+			position: relative;
+		}
+	}
+}
